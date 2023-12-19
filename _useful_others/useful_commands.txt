@@ -1,0 +1,13 @@
+# create venv
+python -m venv venv
+
+# create venv (alternative with custom python verison) 
+pip install virtualenv
+virtualenv -p python3.10 venv
+
+# create requirements txt file
+pip freeze > requirements.txt
+
+# Activate and deactivate venv
+venv\Scripts\activate
+deactivate

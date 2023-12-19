@@ -1,0 +1,22 @@
+# --------------------------------------------------------------------------------------------------------------------------------------------
+In Local Setup:
+1. Prepare streamlit web-app > Make sure it runs in local host
+2. Create venv inside the folder using: python -m venv venv
+3. Activate the venv using: venv\Scripts\activate or use: deactivte the current venv and reactivate the venv inside the folder
+4. Install required libraries in the venv, check the version of libraries that works best
+5. Check again if the wep-app runs with the venv
+6. Create requirements.txt file using: pip freeze > requirements.txt
+
+# --------------------------------------------------------------------------------------------------------------------------------------------
+In Google Cloud:
+1. Create a new project with unique project name (EG: <project-name> = palm-web) from console.cloud.google.com
+1.1 Open Google Cloud SDK Shell and navigate to the project folder
+1.2 Create Dockerfile and follow README.md file or go to step 2 and 3
+(In the last line of Dockerfile, the python file name, eg app.py, should be same as the main app name in the webapp)
+
+2. Select suitable <service-name> = palm-webapp
+Building the application using: gcloud builds submit --tag gcr.io/palm-web/palm-webapp --project=palm-web
+
+3. Select suitable deploy region: https://cloud.google.com/run/docs/locations?_ga=2.160369341.-1826852978.1702288551&_gac=1.189908825.1702375924.CjwKCAiApuCrBhAuEiwA8VJ6JuDO3ELKmGZtDP8ie_0cNxkuAeO2XS0WXpMTxgjLuPEoBKxLGmiqExoCJiAQAvD_BwE
+Deploy the application using: gcloud run deploy --image gcr.io/palm-web/palm-webapp --platform managed --project=palm-web --region=europe-west3 --allow-unauthenticated
+(Note: After step 3, the service-name can be different and can be deployed in any region to make multiple copies of service)
