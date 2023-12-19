@@ -1,4 +1,4 @@
-venv/
+.git/
 .vscode
 wind.py
 _useful_other/
