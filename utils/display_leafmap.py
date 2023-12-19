@@ -1,5 +1,5 @@
 # Third-party library imports
-import leafmap
+import leafmap # leafmap==0.29.6 keplergl==0.3.2
 import netCDF4 as nc
 import numpy as np
 import xarray as xr

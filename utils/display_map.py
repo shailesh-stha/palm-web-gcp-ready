@@ -3,10 +3,10 @@ import pydeck as pdk
 from shapely.geometry import Polygon
 import streamlit as st
 import geopandas as gpd
-import folium
+import folium # folium==0.14.0
 from folium import plugins
 from folium.raster_layers import ImageOverlay
-from streamlit_folium import st_folium
+from streamlit_folium import st_folium # streamlit-folium==0.15.1
 
 # read and display AOI shapefile
 shapefile_child = r"./data/area_of_interest/aoi_512x512.shp"
