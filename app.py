@@ -1,4 +1,9 @@
 # standard library
+# pip install streamlit streamlit-option-menu netCDF4 plotly matplotlib shapely geopandas 
+# pip install folium==0.14.0 streamlit-folium==0.15.1
+# pip install leafmap==0.29.6 xarray pyproj
+# pip install keplergl==0.3.2
+
 import os
 import time
 
@@ -103,7 +108,7 @@ selected_menu = option_menu(
     menu_title = None,
     options=[f"{lang_dict['option_menu_0']}", f"{lang_dict['option_menu_1']}", f"{lang_dict['option_menu_2']}", f"{lang_dict['option_menu_3']}", f"{lang_dict['option_menu_4']}", f"{lang_dict['option_menu_5']}"],
     icons=["house", "globe2", "map", "palette", "wind", "info-circle"],
-    default_index=0,
+    default_index=4,
     orientation="horizontal",
     styles= option_menu_styles,
     )
